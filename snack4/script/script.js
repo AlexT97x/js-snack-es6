@@ -103,3 +103,19 @@ const squadreSerieA = [
   
   console.log(squadreSerieA);
   
+  squadreSerieA.forEach((element) => {
+    element.punti_fatti = Math.floor(Math.random() * 95) + 1;
+    element.falli_subiti = Math.floor(Math.random() * 20) + 1;
+});
+
+const array_valorizzato = squadreSerieA.map((element) => {
+    const {nome, falli_subiti} = element; 
+
+    let object = {
+        nome,
+        falli_subiti
+    }
+    return object;
+});
+
+console.log(array_valorizzato)
